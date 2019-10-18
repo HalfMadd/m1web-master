@@ -17,6 +17,11 @@ class Container
 			'controller.not.found' => function(){
 				return new \App\API\Controller\NotFoundController();
 			},
+			'controller.country' => function(){
+				return new \App\API\Controller\CountryController(
+					$this->services['repository.country']()
+				);
+			},
 			'core.dotenv' => function(){
 				return new \App\API\Core\Dotenv();
 			},

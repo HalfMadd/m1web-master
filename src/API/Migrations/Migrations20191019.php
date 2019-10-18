@@ -11,9 +11,13 @@ class Migrations20191019 extends AbstractMigrations
 	protected $sql = "
 		INSERT INTO destination.city
 		VALUES
-			(NULL, 'paris', 'paris.jpg'),
+			(0, 'paris', 'paris.jpg'),
 			(NULL, 'tokyo', 'tokyo.jpg'),
 			(NULL, 'londres', 'londres.jpg')
+		;
+		INSERT INTO destination.country
+		VALUES
+			(NULL, 'France', 0)
 		;
 	";
 }

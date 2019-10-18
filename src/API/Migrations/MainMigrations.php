@@ -14,9 +14,8 @@ class MainMigrations
 		$sql = "START TRANSACTION;";
 
 		foreach($directory as $file) {
-			if(!$file->isDot()
-&& preg_match('#^Migrations#', $file->getFilename())){
-$fileName = preg_replace('#\.php#', '', $file->getFilename());
+			if(!$file->isDot() && preg_match('#^Migrations#', $file->getFilename())){
+				$fileName = preg_replace('#\.php#', '', $file->getFilename());
 				$namespace = "App\API\Migrations\\$fileName";
 				$instance = new $namespace();
 				$sql .= $instance->getSQL();

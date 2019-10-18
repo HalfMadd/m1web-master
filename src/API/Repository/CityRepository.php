@@ -27,8 +27,3 @@ class CityRepository
 		return  $results;
 	}
 }
-
-
-
-
-

@@ -21,8 +21,3 @@ class HomepageController extends AbstractController
 		]);
 	}
 }
-
-
-
-
-
